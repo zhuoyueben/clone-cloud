@@ -1,5 +1,6 @@
 FROM openjdk:8
-ARG JAR_FILE
-COPY ${JAR_FILE} app.jar
+#ARG JAR_FILE
+WORKDIR /ROOT
+#COPY ${JAR_FILE} app.jar
 EXPOSE 8885
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-jar","${project.build.finalName}.jar"]
