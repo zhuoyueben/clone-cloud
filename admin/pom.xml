@@ -106,24 +106,24 @@
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>1.0.0</version>
-                <configuration>
-                    <imageName>mall-admin</imageName>
-                    <dockerDirectory>${basedir}</dockerDirectory> <!-- 指定 Dockerfile 路径-->
-                    <!-- 这里是复制 jar 包到 docker 容器指定目录配置，也可以写到 Docokerfile 中 -->
-                    <resources>
-                        <resource>
-                            <targetPath>/ROOT</targetPath>
-                            <directory>${project.build.directory}</directory>
-                            <include>${project.build.finalName}.jar</include>
-                        </resource>
-                    </resources>
-                </configuration>
                 <!--<configuration>-->
-                    <!--<repository>${project.artifactId}</repository>-->
-                    <!--<buildArg>-->
-                        <!--<JAR_FILE>traget/${project.build.finalName}.jar</JAR_FILE>-->
-                    <!--</buildArg>-->
+                    <!--<imageName>mall-admin</imageName>-->
+                    <!--<dockerDirectory>${basedir}</dockerDirectory> &lt;!&ndash; 指定 Dockerfile 路径&ndash;&gt;-->
+                    <!--&lt;!&ndash; 这里是复制 jar 包到 docker 容器指定目录配置，也可以写到 Docokerfile 中 &ndash;&gt;-->
+                    <!--<resources>-->
+                        <!--<resource>-->
+                            <!--<targetPath>/ROOT</targetPath>-->
+                            <!--<directory>${project.build.directory}</directory>-->
+                            <!--<include>${project.build.finalName}.jar</include>-->
+                        <!--</resource>-->
+                    <!--</resources>-->
                 <!--</configuration>-->
+                <configuration>
+                    <repository>${project.artifactId}</repository>
+                    <buildArg>
+                        <JAR_FILE>traget/${project.build.finalName}.jar</JAR_FILE>
+                    </buildArg>
+                </configuration>
             </plugin>
         </plugins>
     </build>
