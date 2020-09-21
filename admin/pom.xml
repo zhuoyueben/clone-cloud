@@ -102,6 +102,17 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>1.0.0</version>
+                <configuration>
+                    <repository>${project.artifactId}</repository>
+                    <buildArg>
+                        <JAR_FILE>traget/${project.build.finalName}.jar</JAR_FILE>
+                    </buildArg>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 

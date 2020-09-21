@@ -72,11 +72,11 @@
             <artifactId>javax.servlet-api</artifactId>
         </dependency>
         <!-- access 接口直接使用resultObj对象-->
-        <dependency>
-            <groupId>com.bjj</groupId>
-            <artifactId>access</artifactId>
-            <version>${access.ver}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.bjj</groupId>-->
+            <!--<artifactId>access</artifactId>-->
+            <!--<version>${access.ver}</version>-->
+        <!--</dependency>-->
         <!-- Druid数据库连接池组件 -->
         <dependency>
             <groupId>com.alibaba</groupId>
