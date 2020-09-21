@@ -119,7 +119,8 @@
                     <!--</resources>-->
                 <!--</configuration>-->
                 <configuration>
-                    <repository>${project.artifactId}</repository>
+                    <!--<repository>${project.artifactId}</repository>-->
+                    <repository>mall-admin</repository>
                     <buildArg>
                         <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
                     </buildArg>
